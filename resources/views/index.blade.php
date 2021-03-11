@@ -28,7 +28,7 @@
         <nav class="navbar navbar-expand-lg fixed-top navbar-custom sticky sticky-dark">
             <div class="container-fluid">
                 <!-- LOGO -->
-                <a class="logo text-uppercase" href="index.html">
+                <a class="logo text-uppercase" href="/">
                     <img src="{{asset('assets/images/landing/logo-light.png')}}" alt="" class="logo-light" height="21" />
                     <img src="{{asset('assets/images/landing/logo-dark.png')}}" alt="" class="logo-dark" height="21" />
                 </a>
@@ -56,7 +56,7 @@
                             <a href="{{route('second', ['auth', 'login'])}}" class="nav-link">Sign In</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{route('second', ['auth', 'register'])}}" class="nav-link">Sign Up</a>
+                            <a href="{{route('any', 'register')}}" class="nav-link">Sign Up</a>
                         </li>
                     </ul>
                     <a class="btn btn-danger navbar-btn ml-2" href=''>
@@ -185,7 +185,7 @@
         <!-- features end -->
 
         <!-- available demos start -->
-        <section class="section bg-gradient" id="demos">
+        <section class="section bg-gradient" id="demo">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
@@ -205,9 +205,9 @@
                                 <img src="{{asset('assets/images/landing/demo/layout-1.png')}}" alt="" class="img-fluid mx-auto d-block">
                                 <h5 class="mb-0 py-2 text-center">Default (Vertical)</h5>
                                 <div class="my-2 text-center">
-                                    <a class="btn btn-success font-weight-bold btn-sm" href="{{route('any', ['dashboard'])}}" target="_blank">Light</a>
-                                    <a class="btn btn-success font-weight-bold btn-sm" href="{{route('second', ['themes', 'dark'])}}" target="_blank">Dark</a>
-                                    <a class="btn btn-success font-weight-bold btn-sm" href="{{route('second', ['themes', 'default-rtl'])}}" target="_blank">RTL</a>
+                                    <a class="btn btn-success font-weight-bold btn-sm" href="{{route('any', ['dashboard'])}}" target="blank">Light</a>
+                                    <a class="btn btn-success font-weight-bold btn-sm" href="{{route('second', ['themes', 'dark'])}}" target="blank">Dark</a>
+                                    <a class="btn btn-success font-weight-bold btn-sm" href="{{route('second', ['themes', 'default-rtl'])}}" target="blank">RTL</a>
                                 </div>
                             </a>
                         </div>
@@ -219,9 +219,9 @@
                                 <img src="{{asset('assets/images/landing/demo/layout-2.png')}}" alt="" class="img-fluid mx-auto d-block">
                                 <h5 class="mb-0 py-2 text-center">Creative (Horizontal)</h5>
                                 <div class="my-2 text-center">
-                                    <a class="btn btn-success font-weight-bold btn-sm" href="{{route('second', ['themes', 'creative'])}}" target="_blank">Light</a>
-                                    <a class="btn btn-success font-weight-bold btn-sm" href="{{route('second', ['themes', 'creative-dark'])}}" target="_blank">Dark</a>
-                                    <a class="btn btn-success font-weight-bold btn-sm" href="{{route('second', ['themes', 'creative-rtl'])}}" target="_blank">RTL</a>
+                                    <a class="btn btn-success font-weight-bold btn-sm" href="{{route('second', ['themes', 'creative'])}}" target="blank">Light</a>
+                                    <a class="btn btn-success font-weight-bold btn-sm" href="{{route('second', ['themes', 'creative-dark'])}}" target="blank">Dark</a>
+                                    <a class="btn btn-success font-weight-bold btn-sm" href="{{route('second', ['themes', 'creative-rtl'])}}" target="blank">RTL</a>
                                 </div>
                             </a>
                         </div>
@@ -233,9 +233,9 @@
                                 <img src="{{asset('assets/images/landing/demo/layout-3.png')}}" alt="" class="img-fluid mx-auto d-block">
                                 <h5 class="mb-0 py-2 text-center">Material</h5>
                                 <div class="my-2 text-center">
-                                    <a class="btn btn-success font-weight-bold btn-sm" href="{{route('second', ['themes', 'material'])}}" target="_blank">Light</a>
-                                    <a class="btn btn-success font-weight-bold btn-sm" href="{{route('second', ['themes', 'material-dark'])}}" target="_blank">Dark</a>
-                                    <a class="btn btn-success font-weight-bold btn-sm" href="{{route('second', ['themes', 'material-rtl'])}}" target="_blank">RTL</a>
+                                    <a class="btn btn-success font-weight-bold btn-sm" href="{{route('second', ['themes', 'material'])}}" target="blank">Light</a>
+                                    <a class="btn btn-success font-weight-bold btn-sm" href="{{route('second', ['themes', 'material-dark'])}}" target="blank">Dark</a>
+                                    <a class="btn btn-success font-weight-bold btn-sm" href="{{route('second', ['themes', 'material-rtl'])}}" target="blank">RTL</a>
                                 </div>
                             </a>
                         </div>
@@ -247,9 +247,9 @@
                                 <img src="{{asset('assets/images/landing/demo/layout-4.png')}}" alt="" class="img-fluid mx-auto d-block">
                                 <h5 class="mb-0 py-2 text-center">Modern (Detached)</h5>
                                 <div class="my-2 text-center">
-                                    <a class="btn btn-success font-weight-bold btn-sm" href="{{route('second', ['themes', 'modern'])}}" target="_blank">Light</a>
-                                    <a class="btn btn-success font-weight-bold btn-sm" href="{{route('second', ['themes', 'modern-dark'])}}" target="_blank">Dark</a>
-                                    <a class="btn btn-success font-weight-bold btn-sm" href="{{route('second', ['themes', 'modern-rtl'])}}" target="_blank">RTL</a>
+                                    <a class="btn btn-success font-weight-bold btn-sm" href="{{route('second', ['themes', 'modern'])}}" target="blank">Light</a>
+                                    <a class="btn btn-success font-weight-bold btn-sm" href="{{route('second', ['themes', 'modern-dark'])}}" target="blank">Dark</a>
+                                    <a class="btn btn-success font-weight-bold btn-sm" href="{{route('second', ['themes', 'modern-rtl'])}}" target="blank">RTL</a>
                                 </div>
                             </a>
                         </div>
@@ -261,9 +261,9 @@
                                 <img src="{{asset('assets/images/landing/demo/layout-6.png')}}" alt="" class="img-fluid mx-auto d-block">
                                 <h5 class="mb-0 py-2 text-center">Saas (Two-Column)</h5>
                                 <div class="my-2 text-center">
-                                    <a class="btn btn-success font-weight-bold btn-sm" href="{{route('second', ['themes', 'saas'])}}" target="_blank">Light</a>
-                                    <a class="btn btn-success font-weight-bold btn-sm" href="{{route('second', ['themes', 'saas-dark'])}}" target="_blank">Dark</a>
-                                    <a class="btn btn-success font-weight-bold btn-sm" href="{{route('second', ['themes', 'saas-rtl'])}}" target="_blank">RTL</a>
+                                    <a class="btn btn-success font-weight-bold btn-sm" href="{{route('second', ['themes', 'saas'])}}" target="blank">Light</a>
+                                    <a class="btn btn-success font-weight-bold btn-sm" href="{{route('second', ['themes', 'saas-dark'])}}" target="blank">Dark</a>
+                                    <a class="btn btn-success font-weight-bold btn-sm" href="{{route('second', ['themes', 'saas-rtl'])}}" target="blank">RTL</a>
                                 </div>
                             </a>
                         </div>
@@ -275,9 +275,9 @@
                                 <img src="{{asset('assets/images/landing/demo/layout-5.png')}}" alt="" class="img-fluid mx-auto d-block">
                                 <h5 class="mb-0 py-2 text-center">Purple</h5>
                                 <div class="my-2 text-center">
-                                    <a class="btn btn-success font-weight-bold btn-sm" href="{{route('second', ['themes', 'purple'])}}" target="_blank">Light</a>
-                                    <a class="btn btn-success font-weight-bold btn-sm" href="{{route('second', ['themes', 'purple-dark'])}}" target="_blank">Dark</a>
-                                    <a class="btn btn-success font-weight-bold btn-sm" href="{{route('second', ['themes', 'purple-rtl'])}}" target="_blank">RTL</a>
+                                    <a class="btn btn-success font-weight-bold btn-sm" href="{{route('second', ['themes', 'purple'])}}" target="blank">Light</a>
+                                    <a class="btn btn-success font-weight-bold btn-sm" href="{{route('second', ['themes', 'purple-dark'])}}" target="blank">Dark</a>
+                                    <a class="btn btn-success font-weight-bold btn-sm" href="{{route('second', ['themes', 'purple-rtl'])}}" target="blank">RTL</a>
                                 </div>
                             </a>
                         </div>

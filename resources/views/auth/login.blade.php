@@ -51,7 +51,7 @@
                                     </div>
 
                                     <div class="form-group mb-3">
-                                        <a href="{{route('login')}}" class="text-muted float-right"><small>Forgot your
+                                        <a href="{{route('any', 'dashboard')}}" class="text-muted float-right"><small>Forgot your
                                             password?</small></a>
                                         <label for="password">Password</label>
                                         <div class="input-group input-group-merge @if($errors->has('password')) is-invalid @endif">

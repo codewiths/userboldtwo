@@ -26,16 +26,14 @@
             </div>
         </div>     
         <!-- end page title --> 
-
         <div class="row">
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
                     <!-- Button trigger modal -->
                     <button type="button" class="btn btn-primary mb-3" data-toggle="modal" data-target="#exampleModal">
-                    Create Blog
+                    <i class="fa fa-plus" aria-hidden="true"></i> Create Blog
                     </button>
-
                     <!-- Modal -->
                     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
@@ -72,19 +70,17 @@
                                             <textarea class="form-control" style="height:280px" name="description" placeholder="Description"></textarea>
                                         </div>
                                     </div>
-                                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                                            <button type="submit" class="btn btn-primary">Submit</button>
-                                    </div>
                                 </div>
-                            </form>
+                            
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary">Submit</button>
                             </div>
+                            </form>
                             </div>
                         </div>
                     </div>
-                        <!-- <a class="btn btn-success" href="/tables/create">Create Blog</a> -->
 
                         <table id="state-saving-datatable" class="table activate-select dt-responsive nowrap w-100">
                             <thead>
@@ -103,12 +99,9 @@
                                 <td>{{ $blog->title }}</td>
                                 <td>{{ $blog->description }}</td>
                                 <td>
-                                    <!-- Button trigger modal -->
-                                    <button type="button" class="btn btn-primary w-50" data-toggle="modal" data-target="#editModal{{$blog->id}}">
-                                    Edit
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal{{$blog->id}}">
+                                    <i class="fa fa-pencil" aria-hidden="true"></i>
                                     </button>
-
-                                    <!-- Modal -->
                                     <div class="modal fade" id="editModal{{$blog->id}}" tabindex="-1" role="dialog" aria-labelledby="editModalLabel{{$blog->id}}" aria-hidden="true">
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
@@ -129,7 +122,6 @@
                                                 </ul>
                                             </div>
                                         @endif
-                                    
                                         <form action="{{ route('tables.update',$blog->id) }}" method="POST">
                                             @csrf
                                             @method('POST')
@@ -147,25 +139,50 @@
                                                         <textarea class="form-control" style="height:150px" name="description" placeholder="Description">{{ $blog->description }}</textarea>
                                                     </div>
                                                 </div>
-                                                <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                                                <button type="submit" class="btn btn-primary">Submit</button>
-                                                </div>
                                             </div>
-                                    
-                                        </form>
+                                        
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            <button type="submit" class="btn btn-primary">Submit</button>
                                         </div>
+                                        </form>
                                         </div>
                                     </div>
                                     </div>
-                                    <!-- <a class="btn btn-primary" href="{{ route('tables.edit',$blog->id) }}">Edit</a> -->
+                                    <!-- <a class="btn btn-primary" href="{{ route('tables.edit',$blog->id) }}">Edit</a>
+
                                     <form action="{{ route('tables.destroy',$blog->id) }}" method="POST">
                                         @csrf
                                         @method('POST')
                                         <button type="submit" class="btn btn-danger mt-3 w-50">Delete</button>
-                                    </form>
+                                    </form> -->
+                                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal">
+                                    <i class="fa fa-trash" aria-hidden="true"></i>
+                                    </button>
+                                    <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Delete Post</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            Are you sure you want to delete this post?
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            <form action="{{ route('tables.destroy',$blog->id) }}" method="POST">
+                                                @csrf
+                                                @method('POST')
+                                                <button type="submit" class="btn btn-danger">Delete</button>
+                                            </form>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    </div>
                                 </td>
                             </tr>
                             @endforeach
@@ -185,7 +202,8 @@
     <!-- Plugins js-->
     <script src="{{asset('assets/libs/datatables/datatables.min.js')}}"></script>
     <script src="{{asset('assets/libs/pdfmake/pdfmake.min.js')}}"></script>
-
+    
     <!-- Page js-->
     <script src="{{asset('assets/js/pages/datatables.init.js')}}"></script>
+    <script src="https://use.fontawesome.com/87f6728107.js"></script>
 @endsection

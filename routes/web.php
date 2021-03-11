@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\RoutingController;
+use App\Http\Controllers\ImageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,7 +18,6 @@ use App\Http\Controllers\RoutingController;
 */
 
 Auth::routes();
-
 Route::get('', [RoutingController::class,'index'])->name('index');
 Route::get('/tables/datatables', [BlogController::class, 'index'])->name('datatables');
 Route::get('/tables/create', [BlogController::class, 'create'])->name('tables.create');
